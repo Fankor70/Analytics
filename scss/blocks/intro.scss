@@ -1,7 +1,5 @@
 .intro-analytics {
-    background: $background-dark-blue;
     padding-top: 50px;
-    height: 815px;
 
     &::after {
         content: "";
@@ -16,6 +14,19 @@
         background: $background-dark-blue;
         clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            bottom: -17px;
+            width: 100%;
+            height: 100%;
+            background: $pink;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+        }
 }
 
 .header {
@@ -61,11 +72,11 @@
 }
 
 .header__btns {
-    &--transparent {
+    .header__btn-transparent {
         @include btn(transparent, transparent, 68px, $gray, 16px, 10px, 53px);
     }
 
-    &--circled {
+    .header__btn-circled {
         @include btn($light-gray, transparent, 68px, $gray, 16px, 10px, 53px);
     }
 }
@@ -131,6 +142,7 @@
         img {
             box-shadow: 0 15px 53px -16px rgba(25, 42, 89, 0.2);
             border-radius: 32px;
+            margin-top: 50px;
         }
 
         &::before {
