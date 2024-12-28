@@ -1,5 +1,6 @@
 .intro-analytics {
     padding-top: 50px;
+    height: 815px;
 
     &::after {
         content: "";
@@ -35,6 +36,7 @@
 
     nav {
         flex-grow: 1;
+        z-index: 1;
     }
 
     &__logo {
@@ -42,6 +44,7 @@
         align-items: center;
         margin-right: 78px;
         text-decoration: none;
+        z-index: 1;
     }
 
     img {
@@ -72,12 +75,15 @@
 }
 
 .header__btns {
+    z-index: 2;
     .header__btn-transparent {
         @include btn(transparent, transparent, 68px, $gray, 16px, 10px, 53px);
+        z-index: 1;
     }
 
     .header__btn-circled {
         @include btn($light-gray, transparent, 68px, $gray, 16px, 10px, 53px);
+        z-index: 1;
     }
 }
 
@@ -85,13 +91,14 @@
     display: flex;
     padding-top: 150px;
     margin-bottom: 258px;
+    z-index: 2;
 
     &__info {
         max-width: 550px;
         margin-right: 80px;
 
         &-title {
-            z-index: 1;
+            z-index: 2;
             position: relative;
             font-weight: 700;
             font-size: 50px;
