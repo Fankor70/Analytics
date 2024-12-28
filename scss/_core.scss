@@ -6,11 +6,11 @@ body {
 }
 
 .container {
-  @include min-max(320px, 100%);
+  @include min-max(320px, 100%)
 }
 
 .wrap {
-  @include min-max(320px, 1200px);
+  @include min-max(320px, 1200px)
 }
 
 p,
@@ -23,4 +23,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
